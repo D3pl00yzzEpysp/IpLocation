@@ -2,8 +2,7 @@
 
 """
 Author : D3pl0yzz Epysp
-Contato : (82)981690602
-Telegram : @NinjaOFC
+Telegram : @ImTheNinja
 
 """
 
@@ -13,22 +12,39 @@ import json
 
 os.system("clear")
 
+
+
+vezes = 1
+
 def IpLocation():
-    print("\n")
-    ip = input("Digite O Ip : ")
-    print("\n")
+  
+  print("\n")
+  ip = input("Digite O Ip : ")
+  print("\n")
 
-    req = requests.post("https://iplocation.com/",{"ip":f"{ip}"})
+  req = requests.post("https://iplocation.com/",{"ip":f"{ip}"})
 
-    resposta = req.json()
+  resposta = req.json()
 
-    data = []
+  data = []
 
-    for x in resposta:
-        data.append(f"{x} : {resposta[x]}")
+  for x in resposta:
+    
+    data.append(f"{x} : {resposta[x]}")
+    
+  print("\n".join(data))
+  
+  de = int(input("[1] - Sim\n[2] - Não\nDeseja Consultar Outro Ip ? : "))
+  
+  if de == 1:
+    
+    vezes = 1 
+    
+  else:
+    
+    vezes = 2
 
-    print("\n".join(data))
-
-while True:
-    IpLocation()
+while vezes == 1:
+  
+  IpLocation()
 
