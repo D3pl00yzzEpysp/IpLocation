@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Author : D3pl0yzz Epysp
-Telegram : @ImTheNinja
-
+Author : Epysp
 """
 
 import os
